@@ -100,7 +100,7 @@ export default function ChatWindow() {
               )}
             </div>
             <p className="text-sm text-gray-500">
-              {isAI ? 'Always ready to help' : isGroup ? `${activeConversation.participants?.length || 2} members` : 'Online'}
+              {isAI ? 'Always ready to help' : isGroup ? `${activeConversation.participantIds?.length || 2} members` : 'Online'}
             </p>
           </div>
         </div>

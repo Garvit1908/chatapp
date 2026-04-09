@@ -231,6 +231,12 @@ export function ChatProvider({ children }) {
     // No-op for localStorage mode
   }, []);
 
+  const loadMessages = useCallback((conversationId) => {
+    const key = `chatapp_messages_${conversationId}`;
+    const data = JSON.parse(localStorage.getItem(key) || '[]');
+    setMessages(data);
+  }, []);
+
   const value = {
     conversations,
     activeConversation,
@@ -239,10 +245,11 @@ export function ChatProvider({ children }) {
     aiModels,
     selectedAiModel,
     aiTyping,
-    connected: true, // Always connected in localStorage mode
+    connected: true,
     setActiveConversation,
     setSelectedAiModel,
     sendMessage,
+    loadMessages,
     createDirectConversation,
     createGroupConversation,
     deleteConversation,

@@ -28,8 +28,10 @@ export default function Sidebar() {
   const menuRef = useRef(null);
 
   useEffect(() => {
-    setAvailableUsers(getAllUsers());
-  }, []);
+    if (showNewChat || showNewGroup) {
+      setAvailableUsers(getAllUsers());
+    }
+  }, [showNewChat, showNewGroup]);
 
   useEffect(() => {
     function handleClickOutside(event) {
