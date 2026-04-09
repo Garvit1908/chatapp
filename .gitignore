@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+server/node_modules/
+
+# Claude Code files
+.claude/
+CLAUDE.md
+
+# Build outputs
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+
+# Database
+*.db
+*.sqlite
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
