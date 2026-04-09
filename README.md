@@ -2,7 +2,6 @@
 
 A modern, real-time chat application with AI integration, built with React and Vite. Features peer-to-peer messaging, group chats, and AI assistant conversations - all stored locally in your browser.
 
-![ChatApp Preview](https://via.placeholder.com/800x400?text=ChatApp+Preview)
 
 ## ✨ Features
 
